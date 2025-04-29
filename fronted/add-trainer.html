@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add Trainer</title>
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+  <h1>Add New Trainer</h1>
+
+  <form id="addTrainerForm">
+    <input type="text" id="trainerName" placeholder="Enter trainer name" required><br><br>
+    <input type="email" id="trainerEmail" placeholder="Enter trainer email" required><br><br>
+    <input type="number" id="subjectId" placeholder="Enter subject ID" required><br><br>
+    <button type="submit">Add Trainer</button>
+  </form>
+
+  <p id="responseMessage"></p>
+
+  <script>
+    document.getElementById('addTrainerForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const name = document.getElementById('trainerName').value;
+      const email = document.getElementById('trainerEmail').value;
+      const subject_id = document.getElementById('subjectId').value;
+
+      fetch('http://localhost:3000/trainer', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, email, subject_id })
+      })
+      .then(response => response.json())
+      .then(data => {
+        console.log(data);
+        document.getElementById('responseMessage').innerText = data.message;
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        document.getElementById('responseMessage').innerText = "Failed to add trainer!";
+      });
+    });
+  </script>
+</body>
+</html>

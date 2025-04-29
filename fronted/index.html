@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Trainer-Subject Management System</title>
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    h1 {
+      background-color: #4CAF50;
+      color: white;
+      padding: 20px;
+      margin: 0;
+    }
+    .container {
+      margin-top: 50px;
+    }
+    .menu {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .menu a {
+      display: block;
+      padding: 20px;
+      background-color: white;
+      border: 2px solid #4CAF50;
+      text-decoration: none;
+      color: #4CAF50;
+      font-weight: bold;
+      border-radius: 10px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    .menu a:hover {
+      background-color: #4CAF50;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Trainer-Subject Management System</h1>
+
+  <div class="container">
+    <div class="menu">
+      <a href="add-trainer.html">Add Trainer</a>
+      <a href="view-trainers.html">View All Trainers</a>
+      <a href="delete-trainer.html">Delete Trainer</a>
+      <a href="get-trainer-by-id.html">Get Trainer by ID</a>
+      <a href="get-trainers-by-subject.html">Get Trainers by Subject</a>
+      <a href="add-subject.html">Add Subject</a>
+      <a href="view-subjects.html">View All Subjects</a>
+      <a href="subject-with-trainers.html">Subject with Trainers</a>
+    </div>
+  </div>
+
+</body>
+</html>
