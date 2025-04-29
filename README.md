@@ -105,6 +105,8 @@ wireframes
 
 
 Add Trainer
+
+
  Page: Add Trainer
     Elements:
     - Heading: "Add New Trainer"
@@ -113,9 +115,13 @@ Add Trainer
     - Input: Subject ID (number)
     - Button: "Add Trainer"
     - Response Message Area
+    
     Functionality:
     - Sends POST request to /trainer with trainer details.
+
+    
 View All Trainers
+
  Page: View All Trainers
     Elements:
     - Heading: "All Trainers"
@@ -123,7 +129,11 @@ View All Trainers
     - Table/List to display trainer name, email, empId, etc.
     Functionality:
     - Sends GET request to /trainer to fetch and display all trainers.
+
+
+    
 Delete Trainer
+
  Page: Delete Trainer
     Elements:
     - Heading: "Delete Trainer"
@@ -132,6 +142,8 @@ Delete Trainer
     - Response Message Area
     Functionality:
     - Sends DELETE request to /trainer with empId in body.
+
+    
 Get Trainer by ID
  Page: Get Trainer by ID
     Elements:
@@ -141,6 +153,9 @@ Get Trainer by ID
     - Display area for result
     Functionality:
     - Sends GET request to /trainer/{id}
+
+
+    
 Get Trainers by Subject
  Page: Get Trainers by Subject
     Elements:
@@ -150,6 +165,8 @@ Get Trainers by Subject
     - Display area for results
     Functionality:
     - Sends GET request to /trainer/{subject}/topic
+
+    
 Add Subject
  Page: Add Subject
     Elements:
@@ -159,6 +176,8 @@ Add Subject
     - Response Message Area
     Functionality:
     - Sends POST request to /subject with subject name.
+
+    
 View All Subjects
  Page: View All Subjects
     Elements:
@@ -167,6 +186,7 @@ View All Subjects
     - Display area for subject list
     Functionality:
     - Sends GET request to /subject
+    
 Get Subject with Trainers
  Page: Get Subject with Trainers
     Elements:
